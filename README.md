@@ -1,4 +1,28 @@
 # запуск
+```bash
+git clone https://github.com/brilevg/task3.git
+cd task3
+git clone --depth 1 --branch v12.0.0 https://github.com/vercel/next.js.git # или скачайте архив
+```
+Они немного различаются.
+
+в task1.py измените название папки
+```bash
+uv run task1.py
+```
+в task2.py введите свой GITHUB_TOKEN
+```bash
+uv run task2.py
+uv run task3.py
+```
+task4.py запускайте в Arch Linux
+```bash
+uv run task4.py
+```
+task5.py запускайте при наличии osv*.json и sbom*.json файлов
+```bash
+uv run task5.py
+``` 
 
 # отчет
 

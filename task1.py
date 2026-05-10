@@ -7,7 +7,7 @@ from collections import defaultdict
 # CONFIG
 # =========================
 
-REPO_PATH = "./next.js-12.0.0"
+REPO_PATH = "./next.js" # ./next.js-12.0.0 
 OUTPUT_FILE = "result_task_1.json"
 
 DEPENDENCY_FIELDS = [
