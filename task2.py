@@ -208,7 +208,7 @@ for dep in dependencies:
             "url": dep["url"],
             "purl": dep["purl"],
             "vulnerabilities": vulns,
-            "secure_version": calculate_secure_version(vulns)
+            "secure_version": calculate_secure_version(nodes)
         }
 
         results.append(result)
