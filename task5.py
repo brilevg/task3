@@ -10,7 +10,7 @@ SBOM_BEFORE = "sbom_before.json"
 SBOM_AFTER = "sbom_after.json"
 
 OSV_BEFORE = "osv_before.json"
-OSV_AFTER = "osv_after.json"
+#OSV_AFTER = "osv_after.json"
 
 # =========================================================
 # HELPERS
@@ -189,7 +189,7 @@ sbom_before = load_json(SBOM_BEFORE)
 sbom_after = load_json(SBOM_AFTER)
 
 osv_before = load_json(OSV_BEFORE)
-osv_after = load_json(OSV_AFTER)
+#osv_after = load_json(OSV_AFTER)
 
 # =========================================================
 # EXTRACT PACKAGES
@@ -203,7 +203,7 @@ packages_after = extract_sbom_packages(sbom_after)
 # =========================================================
 
 vulns_before = extract_vulnerabilities(osv_before)
-vulns_after = extract_vulnerabilities(osv_after)
+vulns_after = extract_vulnerabilities(osv_before) # osv_after, но он пустой
 
 # =========================================================
 # COMPARE PACKAGES

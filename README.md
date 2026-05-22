@@ -183,7 +183,7 @@ osv-scanner scan --sbom=sbom_before.json --format json > osv_before.json
 
 ```
 cdxgen -t os -o sbom_after.json
-osv-scanner scan --sbom=sbom_after.json --format json > osv_after.json
+osv-scanner scan source / > osv_after.txt
 ```
 
 Для анализа изменений был реализован отдельный Python-скрипт, автоматически сравнивающий версии пакетов и обнаруженные уязвимости между состояниями системы до и после обновления. В ходе работы выполнялось извлечение списка пакетов из SBOM-файлов и формирование словарей, содержащих версии, purl-идентификаторы и дополнительную информацию о пакетах. Аналогично из результатов OSV-Scanner извлекались сведения об уязвимостях, включая идентификаторы уязвимостей, описание и уровень критичности.
@@ -199,37 +199,37 @@ osv-scanner scan --sbom=sbom_after.json --format json > osv_after.json
 ```json
 {
   "packages": {
-    "before_total": 379,
-    "after_total": 380,
-    "added": 6,
-    "removed": 5,
+    "before_total": 652,
+    "after_total": 616,
+    "added": 76,
+    "removed": 112,
     "updated": 5,
-    "unchanged": 369,
+    "unchanged": 535,
     "updated_packages": [
       {
-        "name": "kworker/1-1-events",
-        "before_version": "5960",
-        "after_version": "9998"
+        "name": "kworker/1-3-events",
+        "before_version": "1046",
+        "after_version": "1287"
       },
       {
-        "name": "node-MainThread",
-        "before_version": "9866",
-        "after_version": "12955"
+        "name": "kworker/u258-2-events_power_efficient",
+        "before_version": "1016",
+        "after_version": "1552"
       },
       {
         "name": "osqueryi-linux-",
-        "before_version": "9920",
-        "after_version": "13005"
+        "before_version": "1193",
+        "after_version": "5063"
+      },
+      {
+        "name": "psimon",
+        "before_version": "922",
+        "after_version": "1645"
       },
       {
         "name": "systemd-userdbd",
-        "before_version": "455",
-        "after_version": "0"
-      },
-      {
-        "name": "systemd-userwor",
-        "before_version": "0",
-        "after_version": "12954"
+        "before_version": "1135",
+        "after_version": "1630"
       }
     ]
   },
