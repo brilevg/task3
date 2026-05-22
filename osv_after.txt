@@ -1,0 +1,3 @@
+Scanning dir /
+Starting filesystem walk for root: /
+End status: 16 dirs visited, 20 inodes visited, 0 Extract calls, 2.225163ms elapsed, 2.226019ms wall time
